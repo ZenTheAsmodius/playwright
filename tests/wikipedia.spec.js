@@ -25,7 +25,7 @@ test.describe('Wikipedia test', () => {
     await expect(searchContainer.locator('.screen-reader-text')).toHaveText('Search Wikipedia')
   })
 
-  test.only('Should Search for input Real Madrid', async({page}) => {
+  test('Should Search for input Real Madrid', async({page}) => {
     page.fill('#searchInput', 'Real Madrid')
     await page.click('.pure-button')
     await page.waitForTimeout(2000)
